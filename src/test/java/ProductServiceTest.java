@@ -2,6 +2,8 @@ import dto.Product;
 import exception.ProductException;
 import exception.UpdateProductException;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import service.ProductService;
 import service.ProductServiceImpl;
@@ -24,8 +26,16 @@ public class ProductServiceTest {
 //
 
 
+
+
+    @BeforeAll // test data preparation
+    public void beforeAllTestCases(){
+
+    }
+
     //+ve
     @Test
+    @DisplayName("Adding new Product Test & @#$% :)")
     public void addProductTest(){
         ProductService productService = new ProductServiceImpl();
         try {
